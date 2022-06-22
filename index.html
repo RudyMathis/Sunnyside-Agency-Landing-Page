@@ -14,6 +14,7 @@
 			crossorigin="anonymous"
 		></script>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="menu.js" defer></script>
 		<title>Sunnyside agency landing page</title>
 	</head>
 	<body>
@@ -22,7 +23,20 @@
 				<img src="./images/logo.svg" alt="SunnySide" />
 				<div class="menu">
 					<img src="./images/icon-hamburger.svg" alt="menu" />
-					<nav class="navigation">About Services Projects Contact</nav>
+					<nav class="navigation">
+						<p>
+							About 
+						</p>
+						<p>
+							Services 
+						</p>
+						<p>
+							Projects 
+						</p>
+						<button id="contact">
+							Contact
+						</button>
+					</nav>
 				</div>
 			</section>
 			<section class="mobile-image">
@@ -47,7 +61,7 @@
 					grow fast. Engage your clients through compelling visuals that do most
 					of the marketing for you.
 				</p>
-				<mark id="learn-yellow">Learn more</mark>
+				<h5 id="learn-yellow">Learn more</h5>
 			</section>
 			<img
 				class="mobile-image desktop-image"
@@ -61,7 +75,10 @@
 					photographers, videographers, and copywriters, we’ll build and extend
 					your brand in digital places.
 				</p>
-				<mark id="learn-red">Learn more</mark>
+				<div>
+					
+					<h5 id="learn-red">Learn more</h5>
+				</div>
 			</section>
 			<section class="graphic-design container fruit">
 				<h2>Graphic design</h2>
@@ -78,7 +95,7 @@
 				</p>
 			</section>
 			<section class="testimonials container">
-				<mark>Client testimonials</mark>
+				<h3>Client testimonials</h3>
 				<div class="clients">
 					<img class="profile" src="./images/image-emily.jpg" alt="Emily" />
 					<p class="client-quote">

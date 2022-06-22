@@ -1,33 +1,9 @@
-/* 
-### Primary
-
-- Soft red: hsl(7, 99%, 70%)
-- Yellow: hsl(51, 100%, 49%)
-- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-- Dark blue (photography text): hsl(198, 62%, 26%)
-- Dark moderate cyan (footer): hsl(168, 34%, 41%)
-
-### Neutral
-
-- Very dark desaturated blue: hsl(212, 27%, 19%)
-- Very dark grayish blue: hsl(213, 9%, 39%)
-- Dark grayish blue: hsl(232, 10%, 55%)
-- Grayish blue: hsl(210, 4%, 67%)
-- White: hsl(0, 0%, 100%)
-
-
-### Font
-
-- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
-- Weights: 600
-- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-- Weights: 700, 900
- */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 :root{
     /* Primary */
     --Soft-Red: hsl(7, 99%, 70%);
     --Yellow: hsl(51, 100%, 49%);
+    --Soft-Green: hsl(169, 46%, 71%);
     /* graphic design text */
     --Dark-Desaturated-Cyan: hsl(167, 40%, 24%);
     /* photography text */
@@ -43,31 +19,13 @@
     --White: hsl(0, 0%, 100%);
 }
 
-@font-face {
-    font-family: 'Barlow';
-    src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
-    font-style: normal;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Fraunces';
-    src: url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
-    font-style: normal;
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'Fraunces';
-    src: url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap');
-    font-weight: 900;
-}
-
 *{
     box-sizing: border-box;
     font-size: 18px;
     margin: 0;
     padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif;
 }
 
 body{
@@ -82,22 +40,30 @@ body{
     max-width: 100%;
 }
 
+p,
+h2,
+h5{
+    padding: .5em;
+}
+
 p{
     line-height: 1.5rem;
-    font-family: "Barlow";
+    font-family: 'Barlow', sans-serif;
     font-weight: 600;
     color: var(--Dark-Greyish-Blue);
 }
 
 h1,
 h2,
-h3{
-    /* padding: 1em; */
-    font-family: "Fraunces";
+h3,
+h5,
+button{
+    font-family: 'Fraunces', serif;
     font-weight: 900;
 }
 
 h1{
+    padding: 1.5em;
     font-size: 2rem;
     color: var(--White);
     text-transform: uppercase;
@@ -117,12 +83,18 @@ h3{
 
 h4{
     margin-top: 2rem;
-    font-family: "Fraunces";
+    font-family: 'Fraunces', serif;
     font-weight: 900;
+}
+h5:hover,
+h5:focus,
+button:hover,
+button:focus{
+    cursor: pointer;
 }
 
 .container {
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
 }
 
 /* header */
@@ -130,8 +102,10 @@ h4{
 header{
     max-width: 100%;
     background-image: url(./images/mobile/image-header.jpg);
+    background-color: hsl(200, 100%, 62%);
     background-size: 100%;
-    height: 29em;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 .sunny-side-nav{
@@ -142,8 +116,56 @@ header{
     width: 100%;
 }
 
+.menu{
+    position: relative;
+}
+
 .navigation{
     display: none;
+}
+
+.navigation-mobile{
+    position: absolute;
+    top: 4em;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1em;
+    width: 16em;
+    height: 16em;
+    background-color: var(--White);
+}
+
+.top-arrow:before,
+.top-arrow:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent var(--White) transparent;
+}
+
+.top-arrow:after {
+    right: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent var(--White) transparent;
+}
+
+#contact{
+    background-color: var(--Yellow);
+    padding: 1em 1.5em;
+    border-radius: 99px;
+    border: none;
+
+}
+
+.arrow{
+    margin-bottom: 8em;
 }
 
 /* main */
@@ -167,15 +189,16 @@ header{
     line-height: 1.25rem;
     margin: 0;
     color: var(--Very-Dark-Desaturated-Blue);
-    margin-bottom: 2em;
 }
 
 .graphic-design{
     background-image: url(./images/mobile/image-graphic-design.jpg);
+    background-color: var(--Soft-Green);
 }
 
 .photography{
     background-image: url(./images/mobile/image-photography.jpg);
+    background-color: hsl(199, 100%, 69%);
 }
 
 .profile{
@@ -193,9 +216,6 @@ header{
     max-width: 50%;
 }
 
-.testimonials{
-    margin-bottom: 2em;
-}
 
 .testimonials > h3 {
     margin: 2em 0 0 0;
@@ -217,15 +237,6 @@ header{
     font-size: .75rem;
 }
 
-#learn-yellow{
-/* not sure */
-background-color: var(--Yellow);
-}
-
-#learn-red{
-/* not sure */
-background-color: var(--Soft-Red);
-}
 
 /* footer */
 
@@ -235,11 +246,10 @@ footer{
     align-items: center;
     color: var(--Dark-Moderate-Cyan);
     width: 100%;
-    background-color: hsl(168, 44%, 70%);;
+    background-color: var(--Soft-Green)
 }
 
 .logo{
-    max-width: 124px;
     margin: 1em;
 }
 
@@ -248,20 +258,28 @@ footer > img {
 }
 
 .menu-item {
-    margin: 1rem;
     color: var(--Dark-Moderate-Cyan);
 }
 
 .footer-nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    max-width: 100%;
 }
 
 .socials{
-    margin: 2em;
+    margin: 1em;
 }
 
 .fa-brands{
     margin: .5em;
+}
+
+.fa-brands:hover,
+.fa-brands:focus,
+.menu-item:hover,
+.menu-item:focus{
+    cursor: pointer;
+    color: var(--White);
 }
