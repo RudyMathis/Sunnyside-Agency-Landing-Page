@@ -26,6 +26,7 @@
     padding: 0;
     font-family: 'Barlow', sans-serif;
     font-family: 'Fraunces', serif;
+    /* outline: auto; */
 }
 
 body{
@@ -102,10 +103,11 @@ button:focus{
 header{
     max-width: 100%;
     background-image: url(./images/mobile/image-header.jpg);
-    background-color: hsl(200, 100%, 62%);
-    background-size: 100%;
-    background-position: bottom;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: hsl(200, 100%, 62%);
+    height: 30em;
 }
 
 .sunny-side-nav{
@@ -126,6 +128,7 @@ header{
 
 .navigation-mobile{
     position: absolute;
+    z-index: 2;
     top: 4em;
     right: 0;
     display: flex;
@@ -164,14 +167,10 @@ header{
 
 }
 
-.arrow{
-    margin-bottom: 8em;
-}
 
 /* main */
 
 .fruit{
-
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -217,7 +216,7 @@ header{
 }
 
 
-.testimonials > h3 {
+.client-text {
     margin: 2em 0 0 0;
     color: var(--Greyish-Blue);
     letter-spacing: .25rem;
@@ -282,4 +281,70 @@ footer > img {
 .menu-item:focus{
     cursor: pointer;
     color: var(--White);
+}
+
+.desktop-image{
+    display:none;
+}
+
+.collection-desktop{
+    display: none;
+}
+
+
+@media (min-width: 768px) {
+
+    .desktop-image{
+        display: block;
+        max-width: 50%;
+    }
+
+    .mobile-image{
+        display: none;
+    }
+    
+    header{
+        width: 100%;
+        background-image: url(./images/desktop/image-header.jpg);
+    }
+
+    .transform-container,
+    .audience-container,
+    .fruits,
+    .testimonials
+    {
+        display: flex;
+        max-width: 100%;
+    }
+
+    .fruit{
+        background-size: 100%;
+        height: 25em;
+        max-width: 50%;
+    }
+
+    .graphic-design{
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+    }
+    
+    .photography{
+        background-image: url(./images/desktop/image-photography.jpg);
+    }
+
+    .client-text {
+        padding-top: 5em;
+
+    }
+
+    .collection{
+        max-width: 25%;
+    }
+
+    .menu-item {
+        margin: 1em;
+    }
+
+    .fa-brands{
+        margin: 1em;
+    }
 }

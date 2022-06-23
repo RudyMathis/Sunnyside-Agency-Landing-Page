@@ -18,7 +18,7 @@
 		<title>Sunnyside agency landing page</title>
 	</head>
 	<body>
-		<header>
+		<header class="header">
 			<section class="sunny-side-nav">
 				<img src="./images/logo.svg" alt="SunnySide" />
 				<div class="menu">
@@ -39,35 +39,47 @@
 					</nav>
 				</div>
 			</section>
-			<section class="mobile-image">
+			<section>
 				<h1>We are creatives</h1>
 				<img
-					class="arrow"
 					src="./images/icon-arrow-down.svg"
 					alt="Down Arrow"
 				/>
 			</section>
 		</header>
 		<main>
-			<img
-				class="mobile-image desktop-image"
-				src="./images/mobile/image-transform.jpg"
-				alt="transform image"
-			/>
-			<section class="transform container">
-				<h2>Transform your brand</h2>
-				<p>
-					We are a full-service creative agency specializing in helping brands
-					grow fast. Engage your clients through compelling visuals that do most
-					of the marketing for you.
-				</p>
-				<h5 id="learn-yellow">Learn more</h5>
-			</section>
-			<img
-				class="mobile-image desktop-image"
+			<div class="transform-container">
+				<img
+					class="mobile-image"
+					src="./images/mobile/image-transform.jpg"
+					alt="transform image"
+				/>
+				<section class="transform container">
+					<h2>Transform your brand</h2>
+					<p>
+						We are a full-service creative agency specializing in helping brands
+						grow fast. Engage your clients through compelling visuals that do most
+						of the marketing for you.
+					</p>
+					<h5 id="learn-yellow">Learn more</h5>
+				</section>
+					<img
+					class="desktop-image"
+					src="./images/desktop/image-transform.jpg"
+					alt="transform image"
+					/>
+			</div>
+			<div class="audience-container">
+				<img
+				class="mobile-image"
 				src="./images/mobile/image-stand-out.jpg"
-				alt="transform image"
-			/>
+				alt="stan-out image"
+				/>
+				<img
+				class="desktop-image"
+				src="./images/desktop/image-stand-out.jpg"
+				alt="stand-out image"
+				/>
 			<section class="stand-out container">
 				<h2>Stand out to the right audience</h2>
 				<p>
@@ -76,89 +88,114 @@
 					your brand in digital places.
 				</p>
 				<div>
-					
 					<h5 id="learn-red">Learn more</h5>
 				</div>
+			</div>
 			</section>
-			<section class="graphic-design container fruit">
-				<h2>Graphic design</h2>
-				<p>
-					Great design makes you memorable. We deliver artwork that underscores
-					your brand message and captures potential clients’ attention.
-				</p>
-			</section>
-			<section class="photography container fruit">
-				<h2>Photography</h2>
-				<p>
-					Increase your credibility by getting the most stunning, high-quality
-					photos that improve your business image.
-				</p>
-			</section>
-			<section class="testimonials container">
-				<h3>Client testimonials</h3>
-				<div class="clients">
-					<img class="profile" src="./images/image-emily.jpg" alt="Emily" />
-					<p class="client-quote">
-						We put our trust in Sunnyside and they delivered, making sure our
-						needs were met and deadlines were always hit.
+			<div class="fruits">
+				<section class="graphic-design container fruit">
+					<h2>Graphic design</h2>
+					<p>
+						Great design makes you memorable. We deliver artwork that underscores
+						your brand message and captures potential clients’ attention.
 					</p>
-					<h4>Emily R.</h4>
-					<p class="job-title">Marketing Director</p>
-				</div>
-				<div class="clients">
-					<img class="profile" src="./images/image-thomas.jpg" alt="Thomas" />
-					<p class="client-quote">
-						Sunnyside’s enthusiasm coupled with their keen interest in our
-						brand’s success made it a satisfying and enjoyable experience.
+				</section>
+				<section class="photography container fruit">
+					<h2>Photography</h2>
+					<p>
+						Increase your credibility by getting the most stunning, high-quality
+						photos that improve your business image.
 					</p>
-					<h4>Thomas S.</h4>
-					<p class="job-title">Chief Operating Officer</p>
-				</div>
-				<div class="clients">
-					<img class="profile" src="./images/image-jennie.jpg" alt="Jennie" />
-					<p class="client-quote">
-						Incredible end result! Our sales increased over 400% when we worked
-						with Sunnyside. Highly recommended!
-					</p>
-					<h4>Jennie F.</h4>
-					<p class="job-title">Business Owner</p>
-				</div>
-			</section>
-			<section class="image-collection">
-				<img
+				</section>
+			</div>
+		</div>
+		<h3 class="client-text">Client testimonials</h3>
+				<section class="testimonials container">
+					<div class="clients">
+						<img class="profile" src="./images/image-emily.jpg" alt="Emily" />
+						<p class="client-quote">
+							We put our trust in Sunnyside and they delivered, making sure our
+							needs were met and deadlines were always hit.
+						</p>
+						<h4>Emily R.</h4>
+						<p class="job-title">Marketing Director</p>
+					</div>
+					<div class="clients">
+						<img class="profile" src="./images/image-thomas.jpg" alt="Thomas" />
+						<p class="client-quote">
+							Sunnyside’s enthusiasm coupled with their keen interest in our
+							brand’s success made it a satisfying and enjoyable experience.
+						</p>
+						<h4>Thomas S.</h4>
+						<p class="job-title">Chief Operating Officer</p>
+					</div>
+					<div class="clients">
+						<img class="profile" src="./images/image-jennie.jpg" alt="Jennie" />
+						<p class="client-quote">
+							Incredible end result! Our sales increased over 400% when we worked
+							with Sunnyside. Highly recommended!
+						</p>
+						<h4>Jennie F.</h4>
+						<p class="job-title">Business Owner</p>
+					</div>
+				</section>
+			<div class="collections">
+				<section class="image-collection">
+					<img
 					class="collection"
 					src="./images/mobile/image-gallery-milkbottles.jpg"
 					alt="milk bottles"
-				/>
-				<img
-					class="collection"
+					/>
+					<img
+					class="collection-desktop"
+					src="./images/desktop/image-gallery-milkbottles.jpg"
+					alt="milk bottles"
+					/>
+					<img
+					class="collection "
 					src="./images/mobile/image-gallery-orange.jpg"
 					alt="orange"
-				/>
-				<img
+					/>
+					<img
+					class="collection-desktop"
+					src="./images/desktop/image-gallery-orange.jpg"
+					alt="orange"
+					/>
+					<img
 					class="collection"
 					src="./images/mobile/image-gallery-cone.jpg"
 					alt="cone"
-				/>
-				<img
+					/>
+					<img
+					class="collection-desktop"
+					src="./images/desktop/image-gallery-cone.jpg"
+					alt="cone"
+					/>
+					<img
 					class="collection"
 					src="./images/mobile/image-gallery-sugar-cubes.jpg"
 					alt="sugar cubes"
-				/>
+					/>
+					<img
+					class="collection-desktop"
+					src="./images/desktop/image-gallery-sugarcubes.jpg"
+					alt="sugar cubes"
+					/>
 			</section>
+		</div>
 		</main>
-		<footer class="container">
+		<footer class="container footer">
 			<img class="logo" src="./images/logo.svg" alt="SunnySide" />
 			<div class="footer-nav">
         <p class="about menu-item">
-          About 
-      </p>
-      <p class="services menu-item">
+        About 
+        </p>
+        <p class="services menu-item">
         Services 
-      </p>
-      <p class="projects menu-item">
+        </p>
+        <p class="projects menu-item">
         Projects</div>
-      </p>
+        </p>
 			<section class="socials">
 				<i class="fa-brands fa-facebook-square"></i>
 				<i class="fa-brands fa-instagram"></i>
