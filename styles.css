@@ -26,7 +26,6 @@
     padding: 0;
     font-family: 'Barlow', sans-serif;
     font-family: 'Fraunces', serif;
-    /* outline: auto; */
 }
 
 body{
@@ -87,10 +86,15 @@ h4{
     font-family: 'Fraunces', serif;
     font-weight: 900;
 }
+
 h5:hover,
 h5:focus,
 button:hover,
-button:focus{
+button:focus,
+.hamburger:hover,
+.hamburger:focus,
+.navigation:hover,
+.navigation:focus{
     cursor: pointer;
 }
 
@@ -121,6 +125,7 @@ header{
 .menu{
     position: relative;
 }
+
 
 .navigation{
     display: none;
@@ -160,15 +165,33 @@ header{
 }
 
 #contact{
-    background-color: var(--Yellow);
     padding: 1em 1.5em;
     border-radius: 99px;
     border: none;
-
+    background-color: transparent;
 }
 
-
+#contact:hover,
+#contact:focus{
+    cursor: pointer;
+    background-color: var(--Yellow);
+}
 /* main */
+
+
+#learn-red,
+#learn-yellow{
+    text-decoration-line: underline;
+    text-decoration-thickness: 10px;
+}
+
+#learn-red{
+    text-decoration-color: var(--Soft-Red);
+}
+
+#learn-yellow{
+    text-decoration-color: var(--Yellow);
+}
 
 .fruit{
     display: flex;
@@ -234,6 +257,7 @@ header{
 .job-title{
     margin: .5em;
     font-size: .75rem;
+    color: var(--Greyish-Blue);
 }
 
 
@@ -302,10 +326,46 @@ footer > img {
     .mobile-image{
         display: none;
     }
-    
+
+    p,
+    h2,
+    h5{
+        padding: 1rem 6rem;
+        text-align: start;
+    }
+
     header{
         width: 100%;
         background-image: url(./images/desktop/image-header.jpg);
+        height: 40em;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .navigation{
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation > p {
+        color: var(--White);
+        padding: 1rem 2rem;
+    }
+
+    #contact{
+        border: none;
+        color: white;
+    }
+    #contact:hover,
+    #contact:focus{
+        cursor: pointer;
+        background-color: hsla(0, 0%, 100%, 25%);
     }
 
     .transform-container,
@@ -314,14 +374,22 @@ footer > img {
     .testimonials
     {
         display: flex;
+        align-items: center;
         max-width: 100%;
     }
 
     .fruit{
         background-size: 100%;
-        height: 25em;
+        height: 35em;
         max-width: 50%;
     }
+
+    .fruit > h2,
+    .fruit > p{
+        padding: .75rem 5rem;
+        text-align: center;
+    }
+    
 
     .graphic-design{
         background-image: url(./images/desktop/image-graphic-design.jpg);
@@ -333,14 +401,22 @@ footer > img {
 
     .client-text {
         padding-top: 5em;
+    }
 
+    .clients > p,
+    .clients >h4{
+        padding: 0;
+    }
+
+    p.job-title{
+        text-align: center;
     }
 
     .collection{
         max-width: 25%;
     }
 
-    .menu-item {
+    .menu-item{
         margin: 1em;
     }
 

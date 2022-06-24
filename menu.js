@@ -1,8 +1,8 @@
-const menu = document.querySelector(".menu");
+const hamburger = document.querySelector(".hamburger");
 const navigationMoblie = document.querySelector(".navigation");
 
 
-menu.addEventListener("click", ()=>{
+hamburger.addEventListener("click", ()=>{
     navigationMoblie.classList.toggle("navigation-mobile");
     navigationMoblie.classList.toggle("top-arrow");
 })
